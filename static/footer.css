@@ -1,0 +1,25 @@
+/* Reset some basic elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.footer {
+    
+    width: 100%;
+    margin-top: auto;  /* 确保页脚在页面底部 */
+    background-color: #f0f0f0;
+    padding: 0;
+    text-align: center;
+    z-index: 999;
+}
+
+.footer img {
+    width: 100%;
+    height: auto;
+}

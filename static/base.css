@@ -1,0 +1,68 @@
+@font-face {
+    font-family: Nunito-Reg;
+    src: url(https://static.igem.wiki/teams/5367/icons/icons/fonts/nunito-reg.woff)
+}
+
+
+
+@font-face {
+    font-family: Nunito-Bold;
+    src: url(https://static.igem.wiki/teams/4628/wiki/fonts/nunito-bold.ttf)
+}
+
+@font-face {
+    font-family: Montserrat-Reg;
+    src: url(https://static.igem.wiki/teams/4628/wiki/fonts/montserrat-regular.otf)
+}
+
+@font-face {
+    font-family: Montserrat-Semi;
+    src: url(https://static.igem.wiki/teams/4628/wiki/fonts/montserrat-semibold.otf)
+}
+
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url(https://static.igem.wiki/teams/4628/wiki/fonts/montserrat-bold.otf)
+}
+
+@font-face {
+    font-family: Montserrat-Black;
+    src: url(https://static.igem.wiki/teams/4628/wiki/fonts/montserrat-black.otf)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+body {
+    position: relative;
+    padding-top: 100px;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: var(--bg);
+    
+}
+a {
+   text-decoration: none;
+}
+li {
+    list-style: none;
+}
+:root {
+    --bg: #FFFFF0;
+    --lg: #D5E5CA;
+    --mg:#AFEEEE;
+    --bf: #87CEFA;
+    --border: #FFE4E1;
+    --stress: #9370DB;
+    --font:#3E2723;
+
+}

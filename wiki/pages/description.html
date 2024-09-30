@@ -1,0 +1,111 @@
+{% extends "layout.html" %}
+
+{% block title %}Project Description{% endblock %}
+
+{% block page_content %}
+<div class="poster">
+  <div class="bg"></div>
+  <div class="img">
+      <img src="ttps://static.igem.wiki/teams/5367/page/description/dall-e-2024-07-03-03-12-32-create-a-high-resolution-full-width-cover-image-for-a-website-for-a-team-participating-in-the-igem-competition-the-theme-features-a-young-boy-in-the.webp">
+  </div>
+<div class="title" data-text=" Project Description">Project Description</div>
+</div>
+<div class="page-main">
+  <div class="menubg">
+    <div id="menu" class>
+      <div class="t1" id="subtitle1" onclick="goTo(document.getElementById('0'))">The predicament and challenges we are in</div>
+      <div class="t1" id="subtitle2" onclick="goTo(document.getElementById('1'))">Our powerful Pre-trained deep learning models based on the iGEM database</div>
+      <div class="t1" id="subtitle3" onclick="goTo(document.getElementById('2'))">The way how our model evolve and play a social role</div>
+      <div class="t1" id="subtitle4" onclick="goTo(document.getElementById('3'))">References</div>
+      <div class="t1" id="subtitle5" onclick="goTo(document.getElementById('4'))">……</div>
+      <div class="t1" id="subtitle6" onclick="goTo(document.getElementById('5'))">……</div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="s1" id="0">
+      <div class="h1-wrap">
+        <h1>The predicament and challenges we are in</h1>
+      </div>
+      <p>
+      "This year marks the twentieth anniversary of the igem competition. Looking back on the past 20 years, countless iGEMers have contributed tens of thousands of synthetic biology components with their talents and efforts, and the official iGEM synthetic biology component database has been growing along with the competition year by year. Imagine how many new biological functions and applications could be created if these components could be fully utilized to form new combinations of components with each other. If these components can be utilized by more synthetic biology scholars and even life science researchers, these components can have wider and more far-reaching applications beyond the iGEM competition. However, the current iGEM database suffers from difficult searching, unclear labeling, and low visibility, all of which limit the iGEM's component database from playing a greater role (here you can make use of HP's pre-questionnaire) The powerful depth and great potential of the iGEM database, as well as the existing application dilemmas of the iGEM component database inspired the idea of utilizing the iGEM component database to train AI models and carry forward the efforts of iGEM over the past two decades."
+      </p>
+      <p>
+        ……
+      </p>
+    </div>
+    <div class="s1" id="1">
+      <div class="h1-wrap">
+        <h1>Our powerful Pretrained deep learning models based on the iGEM database</h1>
+      </div>
+      <p>
+        "This year, we plan to use <span style="font-style: italic;">iGEM's component database</span> to train an AI model that will use existing components to transform an input plasmid function into multiple plasmids that have the potential to fulfill that function, while giving the base sequences of the individual components in the plasmid, the database number, and so on. We will go through the following process to build and refine our AI model. (workflow) First, we will organize the database accumulated by iGEM for 20 years into the form of a knowledge graph, and use manual tagging to train the AI model to classify and summarize the data. Next, we will use this knowledge graph to build （train?）an AI model, the function of which is to input the desired function of the plasmid, and the model will give multiple plasmids that can potentially fulfill the function, and at the same time give the sequence of each element base in the plasmid, the database number, etc. Our model will also provide a newcomer mode, so that the general public who has not been exposed to synthetic biology can input vague requirements, the model will give multiple plasmids that can potentially fulfill the function, and will also give how to use the plasmid, as well as detailed information about the function and components of the plasmid, which will make it more convenient for the general public to get in touch with synthetic biology and use it. According to the needs of the training dataset and the knowledge graph dataset required by our model, we are going to give a software to fill in the iGEM database in a standardized way, which only needs to fill in the data according to the instructions to make the data filled in the database become a high-quality corpus. In the long run, the iGEM database can become a high-quality synthetic biology corpus database, and the data in it can be directly used to train AI models. This will make it easier for us to optimize and iterate our models, and for other iGEMers or others to train AI models. In turn, this will facilitate the whole synthetic biology to embrace AI."
+      </p>
+      <div class="img-wrap">
+        <div>
+          <img src="ttps://static.igem.wiki/teams/4628/wiki/imple/1n.jpg">
+        </div>
+        <div class="disc">Figure 1: Product Composition of Flora Sentinel</div>
+      </div>
+      <p>
+        First, the transient expression buffer powder can be used to resuscitate engineered strains when mixed with
+        water. The buffer contains acetosyringone (AS), a phenolic compound that induces <span style="font-style: italic;">Agrobacterium</span> T-DNA transfer,
+        magnesium chloride (MgCl<sub>2</sub>), MES monohydrate, and so on. They are used to regulate ionic strength and
+        pH.
+      </p>
+    </div>
+    <div class="s1" id="2">
+      <div class="h1-wrap">
+        <h1>The way how our model evolve and play a social role</h1>
+      </div>
+      <p>
+        "We will continuously optimize our AI model through wet lab experiments and HP activities, and by doing so, introduce our AI model to the general public and make it truly effective. The wet lab experiments will test the regulatory effects of combinations of regulatory elements from the iGEM database, providing training data for the AI model to predict, score, and rank plasmid functionalities. Meanwhile, HP will reach out to universities, enterprises, and research institutions to gather feedback from professors, engineers, and students, and optimize our model based on their suggestions. Once we have completed the training and refinement of the AI model, we aim to use it to generate new combinations of elements and create new meaningful biological functions, further demonstrating the practical utility of the AI model. Trehalose is an important protective sugar that, when accumulated in yeast, can enhance its tolerance to various environmental stresses, including heat, oxidative, dehydration, and high-salt stresses. This is particularly crucial for yeast to withstand the harsh conditions encountered during industrial fermentation and production. Yeast is widely used in industries such as food, beverage, pharmaceuticals, and biofuels. High trehalose expression can improve yeast's production efficiency and stability, reduce production costs, and increase productivity. Additionally, high trehalose expression can enable yeast to be used in many fields previously difficult for biological production, replacing chemical production with bioproduction, thus reducing the use and pollution of chemicals. We will follow the AI model’s suggestions to increase the expression of enzymes involved in trehalose synthesis and decrease the expression of enzymes involved in trehalose degradation, aiming to obtain yeast that highly expresses trehalose and has practical applications, thereby proving the practical value of the AI model. To better promote our model, HP will collaborate with researchers and other iGEM teams to extend the benefits of the AI model to more life science researchers. Furthermore, HP will conduct outreach activities in primary and secondary schools, encouraging children to use our model, turning their creative biological ideas into reality through synthetic biology, and passing on the torch of synthetic biology to the next generation."
+      </p>
+      <h2 class="h2-wrap"> second title </h2>
+      <p>……</p>
+      <h2 class="h2-wrap">second title</h2>
+      <p>For high economic value crops that are
+        susceptible to diseases, engineered bacterial strains combined with hydroponics or other soilless cultivation
+        methods can ensure the quality of agricultural products.</p>
+      <div class="s2">
+        <div class="img-wrap">
+          <div>
+            <img src=ttps://static.igem.wiki/teams/4628/wiki/imple/4.png">
+          </div>
+          <div class="disc">Figure 4: Applicable Scenarios and Application Methods of Flora Sentinel</div>
+        </div>
+      </div>
+    </div>
+    <div class="s1 ref" id="3">
+      <div class="h1-wrap">
+        <h1>Reference</h1>
+      </div> 
+      <div class="ref-wrap">
+        <p>[1]&nbsp;&nbsp;Kaku T, Sugiura K, Entani T, Osabe K, Nagai T. Enhanced brightness of bacterial luciferase by bioluminescence resonance energy transfer. Sci Rep. 2021;11(1):14994. Published 2021 Jul 22. doi:10.1038/s41598-021-94551-4</p>
+      </div>
+    </div>
+    <div class="s1" id="4">
+      <div class="h1-wrap">
+        <h1>challenges</h1>
+      </div>
+      <p class="no-indent">(1) It may be affected by environmental factors and the effect is unstable. <span style="font-style: italic;">Agrobacterium</span> has different physiological activities under different temperature and humidity conditions, so it cannot be used in all agricultural areas. In addition, the dosage and effect may be affected in different regions.</p>
+      <p class="no-indent">(2) Trade-off Between Yield and Resistance: There is often a trade-off between yield and disease resistance. Energy and resources that a plant could use to defend against diseases are instead used for growth and reproduction. Therefore, the use period and amount of engineered bacteria need to be strictly controlled. </p>
+      <p class="no-indent">(3) The design cycle of nanobody is long, so it is necessary to cooperate with other scientific research to establish a usable antibody platform, which still needs further research.</p>
+    </div>
+    <div class="s1" id="5">
+      <div class="h1-wrap">
+        <h1>……</h1>
+      </div>
+    </div>
+  </div>
+  <div id="gotop">
+    <img src="htps://static.igem.wiki/teams/4628/wiki/gotop.svg" alt="">
+    <div class="text-wrap">
+      <div>BACK TO</div>
+      <div>TOP !</div>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+  
+{% block title %}Results{% endblock %}
+{% block lead %}You can describe the results of your project and your future plans here.{% endblock %}
+
+{% block page_content %}
+
+<div class="poster">
+  <div class="bg"></div>
+  <div class="img">
+      <img src="https://static.igem.wiki/teams/5367/page/description/dall-e-2024-07-03-03-12-32-create-a-high-resolution-full-width-cover-image-for-a-website-for-a-team-participating-in-the-igem-competition-the-theme-features-a-young-boy-in-the.webp">
+  </div>
+<div class="title" data-text="results">Design&Results</div>
+</div>
+
+
+<div class="page-main">
+  <!-- Menu Section -->
+  <div class="menubg">
+      <div id="menu">
+          <div class="t1" id="subtitle1" onclick="goTo(document.getElementById('0'))">Prometheus Model Overview</div>
+          <div class="t1" id="subtitle2" onclick="goTo(document.getElementById('1'))">Experiment Validation</div>
+          <div class="t1" id="subtitle3" onclick="goTo(document.getElementById('2'))">Gene Expression Results</div>
+          <div class="t1" id="subtitle4" onclick="goTo(document.getElementById('3'))">Stress Resistance Tests</div>
+          <div class="t1" id="subtitle5" onclick="goTo(document.getElementById('4'))">Feedback to Prometheus</div>
+      </div>
+  </div>
+  
+  <!-- Content Section -->
+  <div class="content">
+      <!-- Section 1: Prometheus Model Overview -->
+      <div class="s1" id="0">
+          <h1>Prometheus Model Overview</h1>
+          <p>A Successful Trial of Prometheus Model (expert mode): Proof of Engineering Success of Prometheus</p>
+          <p>After completing the first version of the Prometheus build, it is capable of processing natural language, searching for components, and assembling plasmids. The best way to demonstrate the success of the Prometheus model is by using it to successfully direct an experiment.</p>
+          <p>In 2024, NJU China utilized the Prometheus model to conduct a small yet significant synthetic biology experiment with potential real-world applications. This not only showcased the model's ability to guide synthetic biology experiments but also demonstrated its potential to make a real contribution to the world. During the course of wet experiments, feedback from the wet experiment helped create new inspiration for the dry experiment.</p>
+          <p><strong>What We Want to Achieve With the Guidance of Prometheus: High Tolerance Yeast</strong></p>
+          <p>Trehalose is a non-reducing disaccharide composed of two glucose molecules linked by a 1-1 glycosidic bond. Its chemical name is αD-glucopyranosyl-αD-glucopyranoside, with the molecular formula C12H22O11·2H2O and a molecular weight of 378.33. Trehalose can be endogenously expressed in Saccharomyces cerevisiae. Research shows that trehalose serves not only as a microbial carbon reserve but also as a natural protectant, playing a crucial role in protecting cells from various stresses such as high temperatures and osmotic pressure by stabilizing cell membranes, protecting proteins, and maintaining osmotic balance.</p>
+          <img src="https://static.igem.wiki/teams/5367/wet/1trehalose.jpg" alt="Trehalose protects yeast" />
+          <p>Saccharomyces cerevisiae is widely used in various production settings, ranging from food and pharmaceuticals to biofuels. However, not all production environments are conducive to its survival; factors such as unsuitable temperatures, toxicity of byproducts, excessive osmotic pressure, and chemical toxicity can limit yeast productivity. Therefore, yeast strains with high trehalose expression exhibit enhanced resilience in adverse production conditions, resulting in improved survival and higher productivity. These strains can even thrive in previously inhospitable environments, opening up new possibilities for production applications.</p>
+          <img src="https://static.igem.wiki/teams/5367/wet/2-wideapplication.pdf" />
+          <p>This broader application potential enables biological production to replace chemical processes, significantly reducing the use of chemical additives and the generation of hazardous waste. Additionally, it conserves energy, enhances safety, and positively impacts both the natural environment and human health.</p>
+          <img src="" />
+          <p>Therefore, we aim to leverage the Prometheus model to create yeast with high stress resistance, demonstrating its capability to make genuine contributions to synthetic biology in real-world applications.</p>
+      </div>
+
+      <!-- Section 2: Experiment Validation -->
+      <div class="s1" id="1">
+          <h2>Experiment Validation</h2>
+          <p>The Prometheus model successfully achieved high expression of the TPS1 gene. Through literature review, we identified the key gene TPS1 in the endogenous synthesis pathway of trehalose, confirming that high expression of TPS1 can increase the content of endogenous trehalose.</p>
+          <p>We aim to achieve high expression of the TPS1 gene in yeast using a strong promoter. After discussions with Professor Shi Jing from the School of Life Sciences at Nanjing University and Professor Shi Junfeng from Fudan University Affiliated Hospital, we defined the inputs for synthetic biology standards. Consequently, we provided the Prometheus model with the following input: "I want to highly express the TPS1 gene in yeast. Please help me find a strong constitutive promoter that can initiate expression in yeast."</p>
+          <p>We selected three strong promoters for yeast from the options recommended by the Prometheus model: TDH3 (BBa_K124002), TEF2 (BBa_K3753003), and PGK1 (BBa_K2308011). Subsequently, the Prometheus model assisted us in constructing plasmids, and we successfully built plasmids using the TDH3 and TEF2 promoters in the laboratory.</p>
+          <img src="path-to-plasmid1.jpg" alt="Plasmid Construction 1" />
+          <img src="path-to-plasmid2.jpg" alt="Plasmid Construction 2" />
+          <p>We cultured four types of yeast: one overexpressing the TPS1 gene using the TDH3 promoter, another using the TEF2 promoter, a third with the pYET plasmid overexpressing TPS1, and a control yeast transformed with an empty pYET vector. After four days of fermentation, we collected samples. We measured the mRNA concentration of each promoter through total RNA extraction, reverse transcription, and quantitative PCR. This allowed us to verify whether TPS1 was overexpressed, confirm the correct construction of the plasmids by the Prometheus model, and compare the effectiveness of the three promoters to validate the model's component selection.</p>
+      </div>
+
+      <!-- Section 3: Gene Expression Results -->
+      <div class="s1" id="2">
+          <h2>Gene Expression Results</h2>
+          <p>Legend: Light blue: ADH2-1; Gray: pYET-1; Orange: ADH2-2; Yellow: pYET-2; Green: TEF2-1; Pink: TEF2-2; Dark blue: TDH3-1; Red: TDH3-2.</p>
+          <p>Relative expression of TDH3 relative to blank group: 2<sup>(31.48-19.92)</sup> = 3019</p>
+          <p>Relative expression of TEF2 relative to blank group: 2<sup>(31.48-23.32)</sup> = 286</p>
+          <p>Relative expression of ADH2 relative to blank group: 2<sup>(31.48-20.49)</sup> = 2033</p>
+          <p>Relative expression of TDH3 relative to ADH2 group: 2<sup>(20.49-19.92)</sup> = 1.484</p>
+          <p>From the amplification curves, it can be seen that all six experimental groups of the three promoters greatly increased the expression of TPS1, and the Ct values were all in the range of 20-25. The Ct values of the blank group were all after 30. The successful expression of the promoters TDH3 and TEF2 provided by Prometheus was demonstrated, proving the usefulness of the model. Comparing the expression of the TDH3 promoter and the original ADH2 of the pYET plasmid, the TDH3 promoter increased the mRNA concentration of TPS1 by nearly 50% compared to ADH2, proving once again the superiority of Prometheus in component selection.</p>
+      </div>
+
+      <!-- Section 4: Stress Resistance Tests -->
+      <div class="s1" id="3">
+          <h2>Stress Resistance Tests</h2>
+          <p>Subsequently, we conducted stress resistance tests on the four yeast strains. We placed them in conditions unsuitable for yeast growth at 37 degrees Celsius. OD values were measured every two hours, and we plotted the curve of OD values over time. The results showed that the three yeast strains overexpressing TPS1 grew better at 37 degrees Celsius than the control strain. Among them, the yeast overexpressing TPS1 using TDH3 exhibited the best growth with TDH3 provided by the Prometheus model. The figure below effectively illustrates the differences among the four yeast strains.</p>
+          <img src="path-to-stress-test.jpg" alt="Stress Resistance Test Results" />
+      </div>
+
+      <!-- Section 5: Feedback to Prometheus -->
+      <div class="s1" id="4">
+          <h2>Feedback to Prometheus</h2>
+          <p>During the experimental process, we realized that the components provided by the Prometheus model may not always be the optimal choice, and the effectiveness of output components corresponding to the same input can vary.</p>
+          <p>We propose that the model should include a feature that allows for real-time user feedback on the performance of components and experimental data from experiments guided by the Prometheus model. This feedback can be used for reinforcement learning and model optimization, further enhancing its capabilities.</p>
+          <p>Moreover, we recognized that achieving good experimental results with this model still requires a solid biological background. This indicates that further improvements are necessary to broaden the model's audience and truly unleash the potential of synthetic biology. After the wet lab phase, our model embarked on a new journey of advancement.</p>
+      </div>
+  </div>
+</div>
+    
+
+
+
+ 
+  <div id="gotop">
+    <img src="https://static.igem.wiki/teams/4628/wiki/gotop.svg" alt="Back to Top">
+    <div class="text-wrap">
+      <div>BACK TO</div>
+      <div>TOP!</div>
+    </div>
+  </div>
+  
+
+
+{% endblock %}

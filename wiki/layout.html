@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="https://static.igem.wiki/teams/5367/home/logo.png"/>
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+
+    <!-- Bootstrap CSS -->
+    <link href="{{ url_for('static', filename = 'bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename = 'base.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename = 'style.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename = 'page.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename = 'nav.css') }}" rel="stylesheet">
+    <title>{% block title %}{% endblock %} | NJU-China - iGEM 2024</title>
+    
+
+</head>
+
+<body>
+  <!-- Navigation -->
+  {% include 'menu.html' %}
+  
+   {% block page_content %}{% endblock %}
+
+  {% include 'footer.html' %}
+  <script>
+    var TopDistance = 400;
+    let elements = [document.getElementById('0'),
+    document.getElementById('1'), 
+    document.getElementById('2'), 
+    document.getElementById('3'), 
+    document.getElementById('4'),
+    document.getElementById('5')];
+    window.goTo = function(el){
+      document.documentElement.scrollTop += el.getBoundingClientRect().top - TopDistance;
+    }
+    function Highlight(el, subtitle){
+      if (el.getBoundingClientRect().top < TopDistance + 1 && el.getBoundingClientRect().bottom > TopDistance){
+          subtitle.style.fontSize ="23px";
+      }
+      else{
+          subtitle.style.fontSize = "15px";
+      }
+    }
+    function HighlightCheck(){
+      Highlight(elements[0], document.getElementById('subtitle1'));
+      Highlight(elements[1], document.getElementById('subtitle2'));
+      Highlight(elements[2], document.getElementById('subtitle3'));
+      Highlight(elements[3], document.getElementById('subtitle4'));
+      Highlight(elements[4], document.getElementById('subtitle5'));
+      Highlight(elements[5], document.getElementById('subtitle6'));
+    }
+    window.addEventListener("scroll", HighlightCheck);
+  </script>
+  
+  <script>
+    //besidenav
+    document.addEventListener('DOMContentLoaded', function() {
+      const sidebar = document.getElementById('menu');
+      let shouldStick = false; // 用于标记是否应该固定侧边栏
+    
+      // 监听滚动事件
+      window.addEventListener('scroll', function() {
+        // 设置触发固定效果的滚动阈值
+        const stickThreshold = 500;
+    
+        // 检查是否已经达到滚动阈值
+        if (window.scrollY >= stickThreshold && !shouldStick) {
+          // 如果是，并且侧边栏尚未固定，则添加 'sticky' 类
+          sidebar.classList.add('fixed');
+          shouldStick = true; // 更新标记
+        } else if (window.scrollY < stickThreshold && shouldStick) {
+          // 如果页面滚动回缩，并且侧边栏应该固定，但滚动距离小于阈值，则移除 'sticky' 类
+          sidebar.classList.remove('fixed');
+          shouldStick = false; // 更新标记
+        }
+      });
+    });
+    </script>
+    
+    <script>
+    //go top
+    document.getElementById("gotop").addEventListener("click", () => {
+        scrollTo(0,0);
+      })
+    </script>
+    
+
+  
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="{{ url_for('static', filename = 'bootstrap.bundle.min.js') }}"></script>
+</body>
+</html>

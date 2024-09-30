@@ -1,0 +1,318 @@
+{% extends "layout.html" %}
+
+{% block title %}Home{% endblock %}
+{% block lead %}<b>Welcome to iGEM 2024!</b> Your team has been approved and you are ready to start the iGEM season!{% endblock %}
+
+{% block page_content %}
+
+
+
+<link href="{{ url_for('static', filename = 'hstyles.css') }}" rel="stylesheet">
+<script src="{{ url_for('static', filename = 'hscripts.js') }}" async></script>
+    <!-- Hero Section -->
+    <header class="hero">
+         <!-- 初始显示的全屏动图 -->
+         <img src="https://static.igem.wiki/teams/5367/home/hero.gif" alt="Background GIF" class="hero-gif" id="heroGif">
+        
+         <!-- CTA 按钮，默认隐藏 -->
+         <a href="#show1" class="cta-button" id="ctaButton" style="display: none;">Explore Now!</a>
+        </div>
+    </header>
+
+    <!-- Importance of Synthetic Biology Section -->
+    <section id="show1" class="showcase-module">
+        <div class="content">
+            <h1>The <span class="highlight-red">Importance</span> of <span class="highlight-orange">Synthetic Biology</span></h1>
+            <p><span class="highlight-orange">Synthetic biology</span> represents a <span class="highlight-red">transformative leap</span> in biotechnology, enabling breakthroughs in:</p>
+        </div>
+
+        <div class="timeline-container">
+            <!-- 1953: DNA Discovery -->
+            <div class="timeline-event">
+                <div class="timeline-icon">
+                    <img src="https://static.igem.wiki/teams/5367/home/dna.png" alt="DNA Found Icon">
+                </div>
+                <div class="timeline-title">1953: DNA Discovery</div>
+                <div class="timeline-popup">
+                    <h3>1953: Discovery of DNA</h3>
+                    <p>James Watson and Francis Crick discovered the double-helix structure of DNA, laying the foundation for genetic engineering and future biological research.</p>
+                </div>
+            </div>
+    
+            <!-- Repeat for other events -->
+            <div class="timeline-event">
+                <div class="timeline-icon">
+                    <img src="https://static.igem.wiki/teams/5367/home/plasmids.png" alt="Plasmids Icon">
+                </div>
+                <div class="timeline-title">1973: Plasmids Used in Genetic Engineering</div>
+                <div class="timeline-popup">
+                    <h3>1973: Plasmids in Genetic Engineering</h3>
+                    <p>Scientists Herbert Boyer and Stanley Cohen developed genetic engineering techniques using plasmids as vectors, ushering in the era of DNA recombination.</p>
+                </div>
+            </div>
+    
+            <!-- 1982: Synthetic Insulin -->
+        <div class="timeline-event" id="event3">
+            <div class="timeline-icon">
+                <img src="insulin_icon.png" alt="Insulin Icon">
+            </div>
+            <div class="timeline-title">1982: First Synthetic Insulin</div>
+            <div class="timeline-popup">
+                <h3>1982: First Synthetic Insulin</h3>
+                <p>Using recombinant DNA technology, synthetic human insulin was produced, revolutionizing diabetes treatment and marking a breakthrough in synthetic biology in medicine.</p>
+            </div>
+        </div>
+
+        <!-- 2004: iGEM Foundation -->
+        <div class="timeline-event" id="event4">
+            <div class="timeline-icon">
+                <img src="igem_icon.png" alt="iGEM Icon">
+            </div>
+            <div class="timeline-title">2004: Foundation of iGEM</div>
+            <div class="timeline-popup">
+                <h3>2004: iGEM Competition Established</h3>
+                <p>The International Genetically Engineered Machine (iGEM) competition was founded, encouraging students worldwide to create innovative synthetic biology projects, advancing education and research in the field.</p>
+            </div>
+        </div>
+
+        <!-- 2012: CRISPR Technology -->
+        <div class="timeline-event" id="event5">
+            <div class="timeline-icon">
+                <img src="crispr_icon.png" alt="CRISPR Icon">
+            </div>
+            <div class="timeline-title">2012: CRISPR-Cas9 Gene Editing</div>
+            <div class="timeline-popup">
+                <h3>2012: CRISPR-Cas9 Gene Editing</h3>
+                <p>The CRISPR-Cas9 technology enabled simpler and more efficient gene editing, transforming research methods in agriculture and medicine.</p>
+            </div>
+        </div>
+
+        <!-- 2017: Synthetic Chromosomes -->
+        <div class="timeline-event" id="event6">
+            <div class="timeline-icon">
+                <img src="https://static.igem.wiki/teams/5367/home/chromosome.png" alt="Synthetic Chromosome Icon">
+            </div>
+            <div class="timeline-title">2017: Synthetic Chromosomes Created</div>
+            <div class="timeline-popup">
+                <h3>2017: Creation of Synthetic Chromosomes</h3>
+                <p>Scientists successfully synthesized yeast chromosomes, marking a significant step forward in designing new organisms at the cellular level.</p>
+            </div>
+        </div>
+
+        <!-- 2024: BioBricks and Parts Growth -->
+        <div class="timeline-event" id="event7">
+            <div class="timeline-icon">
+                <img src="biobricks_icon.png" alt="BioBricks Icon">
+            </div>
+            <div class="timeline-title">2024: Over 75,000 BioParts</div>
+            <div class="timeline-popup">
+                <h3>2024: Over 75,000 BioBricks Parts</h3>
+                <p>By 2024, the global synthetic biology repository accumulated over 75,000 standardized genetic components, accelerating research and development in synthetic biology.</p>
+            </div>
+        </div>
+            <!-- Add more timeline events here -->
+        </div>
+        
+    </section>
+    <!-- 结束展示模块 -->
+
+
+    <script src="showcase-module.js"></script> <!-- 单独引用模块的JS文件 -->
+
+
+<!-- Industry Challenges Section with Sphere Links and Add More -->
+<section id="challenges" class="sphere-challenges">
+    <div class="sphere-container">
+        <div class="sphere sphere-1">
+            <h3>Complex Tools</h3>
+            <p>The current tools are daunting for newcomers, requiring knowledge in biology, engineering, and computer science.</p>
+        </div>
+
+        <div class="sphere sphere-2">
+            <h3>Time-Consuming Design Cycles</h3>
+            <p>Designing synthetic components is slow and laborious, involving extensive trial and error.</p>
+        </div>
+
+        <div class="sphere sphere-3">
+            <h3>Fragmented Databases</h3>
+            <p>Synthetic biology databases lack real-time updates, making it hard to access the latest findings cohesively.</p>
+        </div>
+
+        <div class="sphere sphere-4">
+            <h3>Limited Collaboration</h3>
+            <p>The lack of integrated solutions results in inefficient workflows, slowing down innovation.</p>
+        </div>
+
+        <div class="sphere sphere-5">
+            <h3>Low Public Awareness</h3>
+            <p>Synthetic biology remains relatively unknown to the public, hindering its growth and societal acceptance.</p>
+        </div>
+
+        <!-- Add More Section -->
+        <div class="sphere sphere-add-more" id="add-more">
+            <h3>Add More...</h3>
+        </div>
+
+        <!-- Hidden Additional Content -->
+        <div class="additional-content" id="additional-content">
+            <div class="sphere sphere-6">
+                <h3>New Challenge 1</h3>
+                <p>Description of the new challenge 1 added after clicking Add More...</p>
+            </div>
+
+            <div class="sphere sphere-7">
+                <h3>New Challenge 2</h3>
+                <p>Description of the new challenge 2 added after clicking Add More...</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-content">
+        <h2>Challenges in <span class="highlight-red">Synthetic Biology</span></h2>
+        <p>In the rapidly evolving field of <span class="highlight-orange">synthetic biology</span>, there are numerous challenges that must be addressed to unlock its full potential:</p>
+    </div>
+</section>
+
+
+<!-- 第一部分: Prometheus Model 介绍 -->
+<section id="solution" class="solution-section">
+    <div class="content">
+        <h2>Our Solution: <span class="highlight-red">The Prometheus Model</span> — Redefining Synthetic Biology</h2>
+        <p>We have created <span class="highlight-orange">Prometheus</span>, a revolutionary large-scale synthetic biology model that overcomes these industry challenges. Here’s how:</p>
+    </div>
+    <div class="arrow">
+        <img src="image/logo.png" alt="Arrow pointing down">
+    </div>
+</section>
+
+<!-- 第二部分: 功能展示区域 -->
+<section id="features" class="features-section">
+    <div class="feature-card">
+        <img src="https://static.igem.wiki/teams/5367/home/2.png" alt="Database Feature" class="feature-gif">
+        <div class="feature-text">
+            <h3><span class="highlight-red">30,000+ Components</span></h3>
+            <p>Housed in an open-source, intelligently curated database. This database not only offers a vast repository but also ensures real-time updates and dynamic evolution, keeping researchers on the cutting edge of synthetic biology.</p>
+        </div>
+    </div>
+
+    <div class="feature-card">
+        <img src="image/Prometheus1.gif" alt="Natural Language Interface Feature" class="feature-gif">
+        <div class="feature-text">
+            <h3><span class="highlight-orange">Natural Language Interface</span></h3>
+            <p>Designed for both experts and beginners. Users can input simple queries like “I need a controllable metabolic pathway,” and the model will instantly recommend optimized synthetic components, complete with detailed descriptions and scores.</p>
+        </div>
+    </div>
+
+    <div class="feature-card">
+        <img src="image/Prometheus1.gif" alt="Collaboration Feature" class="feature-gif">
+        <div class="feature-text">
+            <h3><span class="highlight-red">Seamless Collaboration</span></h3>
+            <p>Prometheus offers an all-in-one platform that streamlines everything from component design to plasmid synthesis, enabling researchers to access everything they need in a single, cohesive environment, boosting productivity and innovation.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- 第一部分: 动态背景与标题介绍 -->
+<section id="prometheus-triumph" class="dynamic-background">
+    <div class="content-container">
+        <h1 class="section-title">Real-World Triumph of the <span class="highlight-orange">Prometheus Model</span></h1>
+        <p class="section-description">
+            The <span class="highlight-red">Prometheus model</span> has emerged as a transformative force in the synthetic biology landscape, celebrated for its <span class="highlight-orange">innovative applications</span> and groundbreaking experimental successes.
+        </p>
+    </div>
+</section>
+
+<!-- 第二部分: 功能展示部分 -->
+<section id="prometheus-gallery" class="gallery-section">
+    <!-- 动态修饰图片 -->
+    <div class="floating-image" style="background-image: url('dynamic-element1.gif');"></div>
+    <div class="floating-image" style="background-image: url('dynamic-element2.gif');"></div>
+
+    <!-- 第一块: 展示两张动图和两张静态图 -->
+    <div class="gallery-block">
+        <h2 class="gallery-title">Revolutionizing Research and Collaboration</h2>
+        <p class="gallery-text">
+            Prometheus is widely adopted by diverse research teams, facilitating seamless collaboration among biologists, engineers, and computer scientists. Users rave about its <span class="highlight-orange">natural language input feature</span>, which simplifies complex design processes, allowing beginners to generate functional plasmids in just a few clicks.
+        </p>
+        <div class="gallery-row">
+            <!-- 两张动图 -->
+            <div class="gallery-item">
+                <img src="gif1.gif" alt="Research GIF 1">
+            </div>
+            <div class="gallery-item">
+                <img src="gif2.gif" alt="Research GIF 2">
+            </div>
+            <!-- 两张静态图片 -->
+            <div class="gallery-item">
+                <img src="image1.jpg" alt="Research Image 1">
+            </div>
+            <div class="gallery-item">
+                <img src="image2.jpg" alt="Research Image 2">
+            </div>
+        </div>
+    </div>
+
+    <!-- 第二块: 8张图片展示 -->
+    <div class="gallery-block">
+        <h2 class="gallery-title">Building a Vibrant Community and Shaping the Future</h2>
+        <p class="gallery-text">
+            Prometheus fosters a dynamic community where over 200 students, through initiatives like the <span class="highlight-red">Southern iGEM Alliance</span>, contribute to refining the model and sharing insights. This collaborative spirit enhances research and knowledge exchange, empowering a diverse range of participants to engage with synthetic biology.
+        </p>
+        <div class="gallery-row creative-gallery">
+            <!-- 创意8张图片展示 -->
+            <div class="creative-item">
+                <img src="image3.jpg" alt="Community Image 1">
+            </div>
+            <div class="creative-item">
+                <img src="image4.jpg" alt="Community Image 2">
+            </div>
+            <div class="creative-item">
+                <img src="image5.jpg" alt="Community Image 3">
+            </div>
+            <div class="creative-item">
+                <img src="image6.jpg" alt="Community Image 4">
+            </div>
+            <div class="creative-item">
+                <img src="image7.jpg" alt="Community Image 5">
+            </div>
+            <div class="creative-item">
+                <img src="image8.jpg" alt="Community Image 6">
+            </div>
+            <div class="creative-item">
+                <img src="image9.jpg" alt="Community Image 7">
+            </div>
+            <div class="creative-item">
+                <img src="image10.jpg" alt="Community Image 8">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+   
+<div class="dynamic-background-section">
+    <div class="vision-container">
+        <h1 class="vision-title">A Vision for the Future:</h1>
+        <h2 class="vision-subtitle">Empowering Researchers, Transforming Industries</h2>
+        <p class="vision-content">
+            As we gather feedback from researchers worldwide, <span class="highlight" data-bg="bg1.jpg">Prometheus</span> continues to evolve, becoming smarter and more intuitive. We envision a future where synthetic biology tools are as accessible as smartphones, where anyone—from students to industrial scientists—can harness the power of intelligent design to solve global challenges.
+        </p>
+        <p class="vision-content">
+            In a world facing crises like <span class="highlight" data-bg="bg2.jpg">climate change</span>, <span class="highlight" data-bg="bg3.jpg">resource depletion</span>, and <span class="highlight" data-bg="bg4.jpg">healthcare limitations</span>, synthetic biology holds the key. And with <span class="highlight" data-bg="bg1.jpg">Prometheus</span>, that key is now within reach.
+        </p>
+    </div>
+</div>
+
+
+
+{% endblock %}
+
+   
+
+ 
+
+    
+
+    

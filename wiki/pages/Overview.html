@@ -1,0 +1,182 @@
+{% extends "layout.html" %}
+  
+{% block title %}Notebook{% endblock %}
+{% block lead %}Document the dates you worked on your project. This should be a detailed account of the work done each day for your project.{% endblock %}
+
+{% block page_content %}
+
+<!-- <div class="row mt-4">
+  <div class="col-lg-8">
+    <h2>What should this page contain?</h2>
+    <hr>
+    <ul>
+      <li>Chronological notes of what your team is doing.</li>
+      <li>Brief descriptions of daily important events.</li>
+      <li>Pictures of your progress.</li>
+      <li>Mention who participated in what task.</li>
+    </ul>
+  </div>
+  <div class="col-lg-4">
+    <h2>Inspirations</h2>
+    <hr>
+    <ul> 
+      <li><a href="http://2018.igem.org/Team:Munich/Notebook">2018 Munich</a></li>
+      <li><a href="https://2019.igem.org/Team:Georgia_State/Notebook">2019 Georgia State</a></li>
+      <li><a href="https://2019.igem.org/Team:Newcastle/Notebook">2019 Newcastle</a></li>
+      <li><a href="https://2020.igem.org/Team:IISER-Pune-India/Notebook">2020 IISER Pune India</a></li>
+      <li><a href="https://2020.igem.org/Team:Lund/Notebook">2020 Lund</a></li>
+      <li><a href="https://2020.igem.org/Team:NOVA_LxPortugal/Notebook">2020 NOVA LxPortugal</a></li>
+      <li><a href="https://2020.igem.org/Team:RDFZ-China/NoteBook">2020 RDFZ China</a></li>
+    </ul>
+  </div>
+</div> -->
+<style>
+  body {
+      background-color: #1e1e1e;
+      color: #dcdcdc;
+      font-family: 'Fira Code', monospace;
+  }
+
+  h1, h2 {
+      color: #f0a500;
+  }
+
+  .content {
+      background-color: #2d2d2d;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px #444;
+  }
+
+  pre {
+      background: linear-gradient(135deg, #282c34, #3e4149);
+      padding: 20px;
+      border-radius: 8px;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #61dafb;
+      overflow-x: auto;
+  }
+
+  .keyword {
+      color: #c678dd;
+  }
+
+  .function {
+      color: #98c379;
+  }
+
+  .variable {
+      color: #e5c07b;
+  }
+
+  .string {
+      color: #e06c75;
+  }
+
+  .comment {
+      color: #7d8799;
+      font-style: italic;
+  }
+  
+  .copy-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #f0a500;
+      color: #1e1e1e;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+
+  .copy-btn:hover {
+      background-color: #61dafb;
+      color: #fff;
+  }
+
+  pre {
+    position: relative; /* Ensure the copy button is positioned relative to the code block */
+    padding: 20px;
+    background: linear-gradient(135deg, #282c34, #3e4149);
+    border-radius: 8px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #61dafb;
+    overflow-x: auto;
+}
+
+  html {
+            scroll-behavior: smooth;
+        }
+
+        /* 动画效果 */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+</style>
+
+
+
+
+
+
+
+
+<div class="page-main">
+  <div class="content">
+      <h1>Prometheus Model Overview</h1>
+      <p><strong>The Prometheus Large Language Model</strong> first gathers relevant information about components from the iGEM database through web crawlers and official database interfaces. It utilizes fine-tuned ChatGLM3 and Prompt Engineering Llama3 to summarize the functional descriptions and usage contexts of these components, organizing and storing them in a structured knowledge graph.</p>
+
+      <p>Then, Prometheus uses the BioSentVec large model to convert natural language information into embedding vectors for subsequent queries and matches. It provides both Freshman and Expert Mode interfaces. In Freshman Mode, users express their needs through natural language conversations, while in Expert Mode, users can input structured queries.</p>
+
+      <blockquote>
+          "We firmly believe that user feedback is a crucial factor in continuously improving model quality."
+      </blockquote>
+
+      <p>Prometheus automatically constructs complete plasmids based on selected components and user requirements, streamlining experimental workflows.</p>
+
+      <pre>
+          <code>
+              <span class="comment">// Initialize the Prometheus Model</span>
+              <span class="keyword">const</span> <span class="variable">model</span> = <span class="keyword">new</span> <span class="function">PrometheusModel</span>();
+              <span class="function">model</span>.<span class="function">buildGraph</span>();
+
+              <span class="comment">// Query the gene expression database</span>
+              <span class="keyword">const</span> <span class="variable">result</span> = <span class="function">model</span>.<span class="function">queryDatabase</span>(<span class="string">'gene expressions'</span>);
+              <span class="function">console</span>.<span class="function">log</span>(<span class="variable">result</span>);
+          </code>
+          <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+      </pre>
+  </div>
+</div>
+
+<script>
+  function copyToClipboard(button) {
+      const code = button.previousElementSibling.innerText;
+      navigator.clipboard.writeText(code).then(function() {
+          button.textContent = 'Copied!';
+          setTimeout(() => button.textContent = 'Copy', 2000);
+      });
+  }
+</script>
+
+
+{% endblock %}

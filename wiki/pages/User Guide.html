@@ -1,0 +1,285 @@
+{% extends "layout.html" %}
+  
+{% block title %}Plant{% endblock %}
+{% block lead %}This award is designed to celebrate exemplary work done in plant synthetic biology.{% endblock %}
+
+{% block page_content %}
+
+<style>
+  body {
+      background-color: #1e1e1e;
+      color: #dcdcdc;
+      font-family: 'Fira Code', monospace;
+  }
+
+  h1, h2 {
+      color: #f0a500;
+  }
+
+  .content {
+      background-color: #2d2d2d;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px #444;
+  }
+
+  pre {
+      background: linear-gradient(135deg, #282c34, #3e4149);
+      padding: 20px;
+      border-radius: 8px;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #61dafb;
+      overflow-x: auto;
+  }
+
+  .keyword {
+      color: #c678dd;
+  }
+
+  .function {
+      color: #98c379;
+  }
+
+  .variable {
+      color: #e5c07b;
+  }
+
+  .string {
+      color: #e06c75;
+  }
+
+  .comment {
+      color: #7d8799;
+      font-style: italic;
+  }
+  
+  .copy-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #f0a500;
+      color: #1e1e1e;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+
+  .copy-btn:hover {
+      background-color: #61dafb;
+      color: #fff;
+  }
+
+  pre {
+    position: relative; /* Ensure the copy button is positioned relative to the code block */
+    padding: 20px;
+    background: linear-gradient(135deg, #282c34, #3e4149);
+    border-radius: 8px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #61dafb;
+    overflow-x: auto;
+}
+
+  html {
+            scroll-behavior: smooth;
+        }
+
+        /* 动画效果 */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+</style>
+
+
+
+<div class="menubg">
+  <div id="menu">
+      <div class="t1" id="subtitle1" onclick="goTo(document.getElementById('backend-environment'))">Backend Environment</div>
+      <div class="t1" id="subtitle2" onclick="goTo(document.getElementById('hardware-requirements'))">Hardware Requirements</div>
+      <div class="t1" id="subtitle3" onclick="goTo(document.getElementById('conda-installation'))">Conda Installation and Environment Creation</div>
+      <div class="t1" id="subtitle4" onclick="goTo(document.getElementById('pip-installation'))">Pip Installation</div>
+      <div class="t1" id="subtitle5" onclick="goTo(document.getElementById('biosentvec-installation'))">BioSentVec Installation</div>
+      <div class="t1" id="subtitle6" onclick="goTo(document.getElementById('llama3-installation'))">Llama3 Installation</div>
+      <div class="t1" id="subtitle7" onclick="goTo(document.getElementById('frontend-environment'))">Frontend Environment</div>
+  </div>
+</div>
+
+<div class="page-main">
+  <div class="content">
+      <h1 id="backend-environment">Backend Environment</h1>
+
+      <h2 id="hardware-requirements">Hardware Requirements</h2>
+      <p>To deploy the backend model, your device must have at least <strong>16GB</strong> of GPU memory and <strong>24GB</strong> of free RAM. The minimum recommended configuration is a <strong>Tesla T4</strong> GPU with CUDA version 12.4.</p>
+
+      <h2 id="conda-installation">Conda Installation and Environment Creation</h2>
+      <p>First, install Anaconda and create a virtual environment for model deployment:</p>
+      <pre>
+          <code>
+              <span class="comment"># Download and install Anaconda</span>
+              wget -c https://repo.anaconda.com/archive/Anaconda3-2024.06-1-Linux-x86_64.sh
+              chmod +x ./Anaconda3-2024.06-1-Linux-x86_64.sh
+              ./Anaconda3-2024.06-1-Linux-x86_64.sh
+              
+              <span class="comment"># Create and activate the virtual environment</span>
+              conda create -n igem python=3.10
+              conda activate igem
+              
+              <span class="comment"># Set up the environment directory</span>
+              mkdir igem
+              cd igem
+          </code>
+          <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+      </pre>
+
+      <p><strong>Tip:</strong> Make sure to follow prompts during the Anaconda installation, especially regarding adding Anaconda to your PATH.</p>
+
+      <h2 id="pip-installation">Pip Installation</h2>
+      <p>Next, you need to install essential software packages using <code>pip</code>:</p>
+      <pre>
+          <code>
+              <span class="comment"># Install pip and essential packages</span>
+              sudo yum install epel-release
+              sudo yum install python-pip
+              sudo yum install python3-pip
+          </code>
+          <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+      </pre>
+
+      <p><strong>Note:</strong> If you're using a different package manager, adjust the commands accordingly.</p>
+
+      <h2 id="biosentvec-installation">BioSentVec Installation</h2>
+      <p>Install BioSentVec as follows:</p>
+      <pre>
+          <code>
+              <span class="comment"># Download and install BioSentVec</span>
+              mkdir Sent2Vec && cd Sent2Vec
+              wget -c https://ftp.ncbi.nlm.nih.gov/pub/lu/Suppl/BioSentVec/BioSentVec_PubMed_MIMICIII-bigram_d700.bin
+              
+              <span class="comment"># Clone and install Sent2Vec</span>
+              git clone https://github.com/epfml/sent2vec.git
+              cd sent2vec
+              pip install .
+              make
+          </code>
+          <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+      </pre>
+
+      <p>After installation, test if Sent2Vec is functioning correctly with the following code:</p>
+      <pre>
+          <code>
+              <span class="comment"># Testing Sent2Vec functionality</span>
+              import sent2vec
+              model = sent2vec.Sent2vecModel()
+              model.load_model('./BioSentVec_PubMed_MIMICIII-bigram_d700.bin')
+              
+              emb = model.embed_sentence("once upon a time .")
+              embs = model.embed_sentences(["first sentence .", "another sentence"])
+              print(embs)
+          </code>
+          <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+      </pre>
+
+      <p><strong>Expected Output:</strong></p>
+      <pre>
+          <code>
+              [[ 0.38158065 -0.11221295 -0.13689151 ... -0.10100605 -0.69602627 0.2560813 ]
+               [ 0.1980965  -0.74697006 -0.3691535  ...  0.11909663 -0.6209392  -0.27145746]]
+          </code>
+      </pre>
+
+      <p><strong>Common Issues:</strong> If you encounter errors during loading, double-check the file path and ensure that the model file is correctly downloaded.</p>
+
+      <h2 id="llama3-installation">Llama3 Installation</h2>
+      <p>For Llama3, refer to its official GitHub page for installation instructions. Model files can be downloaded from the Llama3 website or Hugging Face.</p>
+      <pre>
+          <code>
+              <span class="comment"># Download and install Llama3</span>
+              mkdir llama3 && cd llama3
+              git clone https://github.com/meta-llama/llama3.git
+              cd llama3
+              pip install -e .
+              pip install transformers
+              pip install accelerate
+          </code>
+          <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+      </pre>
+
+      <p><strong>Caution:</strong> Ensure that all dependencies are installed without errors to avoid runtime issues later.</p>
+
+      <h1 id="frontend-environment">Frontend Environment</h1>
+
+      <h2>Frontend Environment Setup</h2>
+      <p>In <code>script.js</code>, change line 4 to update <code>const wsaddr</code> with your server address. The server uses <strong>nginx</strong> for service provision. Configure reverse proxy in <code>nginx.conf</code> as follows:</p>
+      <pre>
+          <code>
+              <span class="comment"># nginx reverse proxy configuration</span>
+              server {
+                  listen 80;
+                  server_name [YOUR_DOMAIN_NAME] localhost;
+                  location / {
+                      root [YOUR_WEBPAGE_PATH];
+                      index  index.html;
+                  }
+
+                  location /ws {
+                      proxy_pass http://[YOUR_BACKEND_IP]:8192;
+                      proxy_http_version 1.1;
+                      proxy_set_header Upgrade $http_upgrade;
+                      proxy_set_header Connection "upgrade";
+                      proxy_set_header Host $host;
+                      proxy_set_header X-Real-IP $remote_addr;
+                      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+                  }
+              }
+          </code>
+          <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+      </pre>
+
+      <p><strong>Tip:</strong> Ensure that your <code>server_name</code> and paths are correctly set to avoid access issues.</p>
+
+      <p>After completing these steps, you can access Prometheus services by opening <code>index.html</code> in a browser or by navigating to your domain or IP.</p>
+  </div>
+</div>
+
+<script>
+  
+
+  function copyToClipboard(button) {
+      const code = button.previousElementSibling.innerText;
+      navigator.clipboard.writeText(code).then(function() {
+          button.textContent = 'Copied!';
+          setTimeout(() => button.textContent = 'Copy', 2000);
+      });
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

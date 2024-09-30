@@ -1,0 +1,206 @@
+{% extends "layout.html" %}
+  
+{% block title %}Diversity and Inclusion{% endblock %}
+{% block lead %}Every individual, regardless of background or experience, should have an equal opportunity to engage with scientific knowledge and technological development.{% endblock %}
+
+{% block page_content %}
+
+
+<style>
+  body {
+      background-color: #1e1e1e;
+      color: #dcdcdc;
+      font-family: 'Fira Code', monospace;
+  }
+
+  h1, h2 {
+      color: #f0a500;
+  }
+
+  .content {
+      background-color: #2d2d2d;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px #444;
+  }
+
+  pre {
+      background: linear-gradient(135deg, #282c34, #3e4149);
+      padding: 20px;
+      border-radius: 8px;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #61dafb;
+      overflow-x: auto;
+  }
+
+  .keyword {
+      color: #c678dd;
+  }
+
+  .function {
+      color: #98c379;
+  }
+
+  .variable {
+      color: #e5c07b;
+  }
+
+  .string {
+      color: #e06c75;
+  }
+
+  .comment {
+      color: #7d8799;
+      font-style: italic;
+  }
+  
+  .copy-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #f0a500;
+      color: #1e1e1e;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+
+  .copy-btn:hover {
+      background-color: #61dafb;
+      color: #fff;
+  }
+
+  pre {
+    position: relative; /* Ensure the copy button is positioned relative to the code block */
+    padding: 20px;
+    background: linear-gradient(135deg, #282c34, #3e4149);
+    border-radius: 8px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #61dafb;
+    overflow-x: auto;
+}
+
+  html {
+            scroll-behavior: smooth;
+        }
+
+        /* 动画效果 */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+</style>
+
+<div class="menubg">
+  <div id="menu">
+      <div class="t1" id="subtitle1" onclick="goTo(document.getElementById('initial-design'))">Initial Design - Knowledge Graph</div>
+      <div class="t1" id="subtitle2" onclick="goTo(document.getElementById('v1-0'))">V1.0</div>
+      <div class="t1" id="subtitle3" onclick="goTo(document.getElementById('v1-1'))">V1.1</div>
+      <div class="t1" id="subtitle4" onclick="goTo(document.getElementById('v1-2'))">V1.2</div>
+      <div class="t1" id="subtitle5" onclick="goTo(document.getElementById('v2-0'))">V2.0</div>
+      <div class="t1" id="subtitle6" onclick="goTo(document.getElementById('v2-1'))">V2.1</div>
+      <div class="t1" id="subtitle7" onclick="goTo(document.getElementById('v3-0'))">V3.0</div>
+  </div>
+</div>
+
+
+
+<div class="page-main">
+  <div class="content">
+      <h1 id="initial-design">Initial Design - Knowledge Graph</h1>
+      <p><strong>Goal:</strong> Same as project goal  
+      <strong>Data Source:</strong> Web scraping data (parts.igem.org), no cleaning  
+      <strong>Graph Design:</strong></p>
+      <ul>
+          <li><strong>Node Types:</strong> (Category (catalog), Component (part))</li>
+          <li><strong>Internal Attributes:</strong> (Webpage original text (webpage), using html2txt)</li>
+          <li><strong>Relationships:</strong> ([Component] belongs to [Category], [Component] and [Component] are twins or uses)</li>
+      </ul>
+
+      <p><strong>Issues:</strong></p>
+      <ul>
+          <li>Internal attributes are chaotic and cannot accurately describe the functions and characteristics of components (1.0)</li>
+          <li>The network structure of relationships is too simple, making global indexing and related reasoning inconvenient (1.0)</li>
+      </ul>
+
+      <h2 id="v1-0">V1.0</h2>
+      <p><strong>Improvements:</strong></p>
+      <ul>
+          <li>Changed internal attributes to (webpage cleaned and extracted description (ChatGLM3), nucleotide sequence (sequence)) (0.0)</li>
+          <li>Used Sent2Vec for global matching (0.0)</li>
+      </ul>
+      
+      <p><strong>Highlights:</strong></p>
+      <ul>
+          <li>Introduced LLM model: Sent2Vec can achieve semantic fuzzy matching, and GLM3 can remove irrelevant content from the webpage.</li>
+      </ul>
+      <p><strong>Issues:</strong></p>
+      <ul>
+          <li>Extraction results have inconsistent formats and lengths, making it difficult to capture key content (1.1)</li>
+          <li>Cannot handle long texts (2.3)</li>
+      </ul>
+
+      <h2 id="v1-1">V1.1</h2>
+      <p><strong>HP:</strong> Collect expectations for large model design and organize dataset annotations.</p>
+      <p><strong>Improvements:</strong></p>
+      <ul>
+          <li>Collected manually annotated data and fine-tuned GLM3 (1.0)</li>
+      </ul>
+
+      <h2 id="v1-2">V1.2</h2>
+      <p><strong>HP:</strong> CCIC/Roundtable Meeting.</p>
+      <p><strong>Improvements:</strong></p>
+      <ul>
+          <li>Created a frontend webpage for usage (1.2)</li>
+      </ul>
+
+      <h2 id="v2-0">V2.0</h2>
+      <p><strong>Event:</strong> Trialed the kernel model released by Asimov, learned about downstream task design (complete plasmid design).</p>
+      <p><strong>HP:</strong> Contacted Asimov and learned about related database interfaces.</p>
+
+      <h2 id="v2-1">V2.1</h2>
+      <p><strong>HP:</strong> Discussed with Professor XX, discovered that the model is of limited use for professionals but has significance for amateurs and beginners.</p>
+      <p><strong>Improvements:</strong></p>
+      <ul>
+          <li>Added plasmid stitching as a downstream task (2.0)</li>
+      </ul>
+
+      <h2 id="v3-0">V3.0</h2>
+      <p><strong>HP:</strong> Interview in Changzhou.</p>
+      <p><strong>Improvements:</strong></p>
+      <ul>
+          <li>Proposed "Freshman Mode," enabling plasmid design through natural language dialogue (2.3)</li>
+      </ul>
+
+      <!-- Add more sections as needed -->
+  </div>
+</div>
+
+<div id="gotop">
+  <img src="https://static.iem.wiki/teams/4628/wiki/gotop.svg" alt="">
+  <div class="text-wrap">
+    <div>BACK TO</div>
+    <div>TOP !</div>
+  </div>
+</div>
+
+
+{% endblock %}

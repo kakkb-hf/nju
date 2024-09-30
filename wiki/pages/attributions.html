@@ -1,0 +1,168 @@
+{% extends "layout.html" %}
+
+{% block title %}Attributions{% endblock %}
+{% block lead %}In the iGEM Competition, we celebrate student effort and achievement. The Attributions form helps the judges differentiate between what students accomplished from how their external collaborators supported them. Therefore, teams must clearly explain on the standard Project Attributions form what work they have conducted by themselves and what has been done by others.{% endblock %}
+
+{% block page_content %}
+
+<!--<div class="row mt-4">
+  <div class="col">
+    <div>
+      <p>Teams must use the standard Attributions form. To meet the attributions requirement, you must display the standard form on your Wiki by following the instructions here: <a href="https://competition.igem.org/deliverables/project-attribution">Project Attribution page</a>.    </p>
+    </div>
+    <div class="bd-callout bd-callout-info">
+      <h4>Bronze Medal Criterion #2</h4>
+      <p>Describe what work your team members did and what other people did for your project.</p>
+      <p>The form that has been embedded in an iframe in this page shows your team's Project Attribution form. This page must keep the form as it is.</p>
+      <p>If you use a different website framework, make sure to embed the right URL for your team's form.</p>
+    </div>
+  </div>
+</div>-->
+
+<!--
+  ======================================================================
+  == VERY IMPORTANT                                                   ==
+  ======================================================================
+  LEAVE THE IFRAME CODE BELOW AS IT IS, THE ATTRIBUTION FORM OF YOUR TEAM
+  WILL BE DISPLAYED ON THIS PAGE. DO NOT REMOVE IT, OTHERWISE YOU RISK OF
+  NOT MEETING BRONZE MEDAL CRITERION #2
+ -->
+<!--<div class="row mt-4">
+  <script type="text/javascript">
+    // Listen to size change and update form height
+    window.addEventListener("message", function (e) {
+      if (e.origin === "https://teams.igem.org") {
+        const {type, data} = JSON.parse(e.data);
+        if (type === "igem-attribution-form") {
+          const element = document.getElementById("igem-attribution-form");
+          element.style.height = `${data + 100}px`;
+        }
+      }
+    });
+  </script>
+  <iframe
+    style='width: 100%'
+    id="igem-attribution-form"
+    src="https://teams.igem.org/wiki/5367/attributions">
+  >
+  </iframe>-->
+  <!-- 表格代码 -->
+  <!--<table border="1">
+    <tr>
+      <th>Name</th>
+      <th>Role</th>
+      <th>3. General Tasks</th>
+    </tr>
+    <tr>
+      <td>q</td>
+      <td>leader</td>
+      <td>wet</td>
+    </tr>
+  </table>-->
+
+  <div class="poster">
+    <div class="bg"></div>
+    <div class="img">
+        <img src="ttps://static.igem.wiki/teams/5367/page/description/dall-e-2024-07-03-03-12-32-create-a-high-resolution-full-width-cover-image-for-a-website-for-a-team-participating-in-the-igem-competition-the-theme-features-a-young-boy-in-the.webp">
+    </div>
+  <div class="title" data-text="attributions">attributions</div>
+  </div>
+  <div class="page-main">
+    <div class="menubg">
+      <div id="menu" class>
+        <div class="t1" id="subtitle1" onclick="goTo(document.getElementById('0'))">subtitle1</div>
+        <div class="t1" id="subtitle2" onclick="goTo(document.getElementById('1'))">subtitle2</div>
+        <div class="t1" id="subtitle3" onclick="goTo(document.getElementById('2'))">subtitle3</div>
+        <div class="t1" id="subtitle4" onclick="goTo(document.getElementById('3'))">subtitle4</div>
+        <div class="t1" id="subtitle5" onclick="goTo(document.getElementById('4'))">……</div>
+        <div class="t1" id="subtitle6" onclick="goTo(document.getElementById('5'))">……</div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="s1" id="0">
+        <div class="h1-wrap">
+          <h1>subtitle1</h1>
+        </div>
+        <p>
+        "This year, we plan to use <span style="font-style: italic;">iGEM's component database</span> to train an AI model that will use existing components to transform an input plasmid function into multiple plasmids that have the potential to fulfill that function, while giving the base sequences of the individual components in the plasmid, the database number, and so on. We will go through the following process to build and refine our AI model. (workflow) First, we will organize the database accumulated by iGEM for 20 years into the form of a knowledge graph, and use manual tagging to train the AI model to classify and summarize the data. Next, we will use this knowledge graph to build （train?）an AI model, the function of which is to input the desired function of the plasmid, and the model will give multiple plasmids that can potentially fulfill the function, and at the same time give the sequence of each element base in the plasmid, the database number, etc. Our model will also provide a newcomer mode, so that the general public who has not been exposed to synthetic biology can input vague requirements, the model will give multiple plasmids that can potentially fulfill the function, and will also give how to use the plasmid, as well as detailed information about the function and components of the plasmid, which will make it more convenient for the general public to get in touch with synthetic biology and use it. According to the needs of the training dataset and the knowledge graph dataset required by our model, we are going to give a software to fill in the iGEM database in a standardized way, which only needs to fill in the data according to the instructions to make the data filled in the database become a high-quality corpus. In the long run, the iGEM database can become a high-quality synthetic biology corpus database, and the data in it can be directly used to train AI models. This will make it easier for us to optimize and iterate our models, and for other iGEMers or others to train AI models. In turn, this will facilitate the whole synthetic biology to embrace AI."
+        </p>
+      </div>
+      <div class="s1" id="1">
+        <div class="h1-wrap">
+          <h1>subtitle2</h1>
+        </div>
+        <p>
+          "This year, we plan to use <span style="font-style: italic;">iGEM's component database</span> to train an AI model that will use existing components to transform an input plasmid function into multiple plasmids that have the potential to fulfill that function, while giving the base sequences of the individual components in the plasmid, the database number, and so on. We will go through the following process to build and refine our AI model. (workflow) First, we will organize the database accumulated by iGEM for 20 years into the form of a knowledge graph, and use manual tagging to train the AI model to classify and summarize the data. Next, we will use this knowledge graph to build （train?）an AI model, the function of which is to input the desired function of the plasmid, and the model will give multiple plasmids that can potentially fulfill the function, and at the same time give the sequence of each element base in the plasmid, the database number, etc. Our model will also provide a newcomer mode, so that the general public who has not been exposed to synthetic biology can input vague requirements, the model will give multiple plasmids that can potentially fulfill the function, and will also give how to use the plasmid, as well as detailed information about the function and components of the plasmid, which will make it more convenient for the general public to get in touch with synthetic biology and use it. According to the needs of the training dataset and the knowledge graph dataset required by our model, we are going to give a software to fill in the iGEM database in a standardized way, which only needs to fill in the data according to the instructions to make the data filled in the database become a high-quality corpus. In the long run, the iGEM database can become a high-quality synthetic biology corpus database, and the data in it can be directly used to train AI models. This will make it easier for us to optimize and iterate our models, and for other iGEMers or others to train AI models. In turn, this will facilitate the whole synthetic biology to embrace AI."
+        </p>
+        <div class="img-wrap">
+          <div>
+            <img src="htt://static.igem.wiki/teams/4628/wiki/imple/1n.jpg">
+          </div>
+          <div class="disc">Figure 1: Product Composition of Flora Sentinel</div>
+        </div>
+      </div>
+      <div class="s1" id="2">
+        <div class="h1-wrap">
+          <h1>subtitle3</h1>
+        </div>
+        <p>
+        "This year, we plan to use <span style="font-style: italic;">iGEM's component database</span> to train an AI model that will use existing components to transform an input plasmid function into multiple plasmids that have the potential to fulfill that function, while giving the base sequences of the individual components in the plasmid, the database number, and so on. We will go through the following process to build and refine our AI model. (workflow) First, we will organize the database accumulated by iGEM for 20 years into the form of a knowledge graph, and use manual tagging to train the AI model to classify and summarize the data. Next, we will use this knowledge graph to build （train?）an AI model, the function of which is to input the desired function of the plasmid, and the model will give multiple plasmids that can potentially fulfill the function, and at the same time give the sequence of each element base in the plasmid, the database number, etc. Our model will also provide a newcomer mode, so that the general public who has not been exposed to synthetic biology can input vague requirements, the model will give multiple plasmids that can potentially fulfill the function, and will also give how to use the plasmid, as well as detailed information about the function and components of the plasmid, which will make it more convenient for the general public to get in touch with synthetic biology and use it. According to the needs of the training dataset and the knowledge graph dataset required by our model, we are going to give a software to fill in the iGEM database in a standardized way, which only needs to fill in the data according to the instructions to make the data filled in the database become a high-quality corpus. In the long run, the iGEM database can become a high-quality synthetic biology corpus database, and the data in it can be directly used to train AI models. This will make it easier for us to optimize and iterate our models, and for other iGEMers or others to train AI models. In turn, this will facilitate the whole synthetic biology to embrace AI."
+        </p>
+        <h2 class="h2-wrap"> second title-1 </h2>
+        <p>
+          For high economic value crops that are
+          susceptible to diseases, engineered bacterial strains combined with hydroponics or other soilless cultivation
+          methods can ensure the quality of agricultural products.
+        </p>
+        <h2 class="h2-wrap">second title-2</h2>
+        <p>
+          For high economic value crops that are
+          susceptible to diseases, engineered bacterial strains combined with hydroponics or other soilless cultivation
+          methods can ensure the quality of agricultural products.
+        </p>
+        <div class="s2">
+          <div class="img-wrap">
+            <div>
+              <img src="https:static.igem.wiki/teams/4628/wiki/imple/4.png">
+            </div>
+            <div class="disc">Figure 4: Applicable Scenarios and Application Methods of Flora Sentinel</div>
+          </div>
+        </div>
+      </div>
+      <div class="s1 ref" id="3">
+        <div class="h1-wrap">
+          <h1>subtitle4</h1>
+        </div> 
+        <div class="ref-wrap">
+          <p>[1]&nbsp;&nbsp;Kaku T, Sugiura K, Entani T, Osabe K, Nagai T. Enhanced brightness of bacterial luciferase by bioluminescence resonance energy transfer. Sci Rep. 2021;11(1):14994. Published 2021 Jul 22. doi:10.1038/s41598-021-94551-4</p>
+        </div>
+      </div>
+      <div class="s1" id="4">
+        <div class="h1-wrap">
+          <h1>instantiate</h1>
+        </div>
+        <p class="no-indent">(1) It may be affected by environmental factors and the effect is unstable. <span style="font-style: italic;">Agrobacterium</span> has different physiological activities under different temperature and humidity conditions, so it cannot be used in all agricultural areas. In addition, the dosage and effect may be affected in different regions.</p>
+        <p class="no-indent">(2) Trade-off Between Yield and Resistance: There is often a trade-off between yield and disease resistance. Energy and resources that a plant could use to defend against diseases are instead used for growth and reproduction. Therefore, the use period and amount of engineered bacteria need to be strictly controlled. </p>
+        <p class="no-indent">(3) The design cycle of nanobody is long, so it is necessary to cooperate with other scientific research to establish a usable antibody platform, which still needs further research.</p>
+      </div>
+      <div class="s1" id="5">
+        <div class="h1-wrap">
+          <h1>……</h1>
+        </div>
+        <div>
+          <p>
+            "This year, we plan to use <span style="font-style: italic;">iGEM's component database</span> to train an AI model that will use existing components to transform an input plasmid function into multiple plasmids that have the potential to fulfill that function, while giving the base sequences of the individual components in the plasmid, the database number, and so on. We will go through the following process to build and refine our AI model. (workflow) First, we will organize the database accumulated by iGEM for 20 years into the form of a knowledge graph, and use manual tagging to train the AI model to classify and summarize the data. Next, we will use this knowledge graph to build （train?）an AI model, the function of which is to input the desired function of the plasmid, and the model will give multiple plasmids that can potentially fulfill the function, and at the same time give the sequence of each element base in the plasmid, the database number, etc. Our model will also provide a newcomer mode, so that the general public who has not been exposed to synthetic biology can input vague requirements, the model will give multiple plasmids that can potentially fulfill the function, and will also give how to use the plasmid, as well as detailed information about the function and components of the plasmid, which will make it more convenient for the general public to get in touch with synthetic biology and use it. According to the needs of the training dataset and the knowledge graph dataset required by our model, we are going to give a software to fill in the iGEM database in a standardized way, which only needs to fill in the data according to the instructions to make the data filled in the database become a high-quality corpus. In the long run, the iGEM database can become a high-quality synthetic biology corpus database, and the data in it can be directly used to train AI models. This will make it easier for us to optimize and iterate our models, and for other iGEMers or others to train AI models. In turn, this will facilitate the whole synthetic biology to embrace AI."
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="gotop">
+    <img src="https:/tatic.igem.wiki/teams/4628/wiki/gotop.svg" alt="">
+    <div class="text-wrap">
+      <div>BACK TO</div>
+      <div>TOP !</div>
+    </div>
+  </div>
+{% endblock %}

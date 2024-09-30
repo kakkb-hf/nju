@@ -1,0 +1,147 @@
+{% extends "layout.html" %}
+  
+{% block title %}Model{% endblock %}
+{% block lead %}Explain your model's assumptions, data, parameters, and results in a way that anyone could understand.{% endblock %}
+
+{% block page_content %}
+
+<!-- <div class="row mt-4">
+  <div class="col">
+    <div class="bd-callout bd-callout-info">
+      <h4>Best Model</h4>
+      <p>Models and computer simulations can help us understand the function and operation of BioBrick Parts and Devices. Simulation and modeling are critical engineering skills that can contribute to project design or provide a better understanding of the modeled process. These processes are even more useful and/or informative when real world data are included in the model. This award is for teams who build a model of their system and use it to inform system design or simulate expected behavior before, or in conjunction with, experiments in the wetlab.</p>
+      <p>To compete for the Best Model prize, select the prize on the <a href="https://competition.igem.org/deliverables/judging-form">judging form</a> and describe your work on this page.</p>
+      <hr>
+      <p>Please see the <a href="https://competition.igem.org/judging/awards">2024 Awards Page</a> for more information.</p>
+    </div>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-lg-8">
+    <h2>Overview</h2>
+    <hr>
+    <p>Mathematical models and computer simulations provide a great way to describe the function and operation of Parts and Devices. Synthetic Biology is an engineering discipline, and part of engineering is simulation and modeling to determine the behavior of your design before you build it. Designing and simulating can be iterated many times in a computer before moving to the lab.</p>
+  </div>
+  <div class="col-lg-4">
+    <h2>Inspirations</h2>
+    <hr>
+    <ul>
+      <li><a href="http://2018.igem.org/Team:GreatBay_China/Model">2018 GreatBay China</a></li>
+      <li><a href="http://2018.igem.org/Team:Leiden/Model">2018 Leiden</a></li>
+      <li><a href="https://2019.igem.org/Team:IISER_Kolkata/Model">2019 IISER Kolkata</a></li>
+      <li><a href="https://2019.igem.org/Team:Exeter/Model">2019 Exeter</a></li>
+      <li><a href="https://2019.igem.org/Team:Mingdao/Model">2019 Mingdao</a></li>
+      <li><a href="https://2020.igem.org/Team:Harvard/Model">2020 Harvard</a></li>
+      <li><a href="https://2020.igem.org/Team:Leiden/Model">2020 Leiden</a></li>
+    </ul>
+  </div>
+</div> -->
+<div class="poster">
+  <div class="bg"></div>
+  <div class="img">
+      <img src="htts://static.igem.wiki/teams/5367/page/description/dall-e-2024-07-03-03-12-32-create-a-high-resolution-full-width-cover-image-for-a-website-for-a-team-participating-in-the-igem-competition-the-theme-features-a-young-boy-in-the.webp">
+  </div>
+<div class="title" data-text="engineering">engineering</div>
+</div>
+<div class="page-main">
+  <div class="menubg">
+    <div id="menu" class>
+      <div class="t1" id="subtitle1" onclick="goTo(document.getElementById('0'))">subtitle1</div>
+      <div class="t1" id="subtitle2" onclick="goTo(document.getElementById('1'))">subtitle2</div>
+      <div class="t1" id="subtitle3" onclick="goTo(document.getElementById('2'))">subtitle3</div>
+      <div class="t1" id="subtitle4" onclick="goTo(document.getElementById('3'))">subtitle4</div>
+      <div class="t1" id="subtitle5" onclick="goTo(document.getElementById('4'))">……</div>
+      <div class="t1" id="subtitle6" onclick="goTo(document.getElementById('5'))">……</div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="s1" id="0">
+      <div class="h1-wrap">
+        <h1>subtitle1</h1>
+      </div>
+      <p>
+      "This year, we plan to use <span style="font-style: italic;">iGEM's component database</span> to train an AI model that will use existing components to transform an input plasmid function into multiple plasmids that have the potential to fulfill that function, while giving the base sequences of the individual components in the plasmid, the database number, and so on. We will go through the following process to build and refine our AI model. (workflow) First, we will organize the database accumulated by iGEM for 20 years into the form of a knowledge graph, and use manual tagging to train the AI model to classify and summarize the data. Next, we will use this knowledge graph to build （train?）an AI model, the function of which is to input the desired function of the plasmid, and the model will give multiple plasmids that can potentially fulfill the function, and at the same time give the sequence of each element base in the plasmid, the database number, etc. Our model will also provide a newcomer mode, so that the general public who has not been exposed to synthetic biology can input vague requirements, the model will give multiple plasmids that can potentially fulfill the function, and will also give how to use the plasmid, as well as detailed information about the function and components of the plasmid, which will make it more convenient for the general public to get in touch with synthetic biology and use it. According to the needs of the training dataset and the knowledge graph dataset required by our model, we are going to give a software to fill in the iGEM database in a standardized way, which only needs to fill in the data according to the instructions to make the data filled in the database become a high-quality corpus. In the long run, the iGEM database can become a high-quality synthetic biology corpus database, and the data in it can be directly used to train AI models. This will make it easier for us to optimize and iterate our models, and for other iGEMers or others to train AI models. In turn, this will facilitate the whole synthetic biology to embrace AI."
+      </p>
+    </div>
+    <div class="s1" id="1">
+      <div class="h1-wrap">
+        <h1>subtitle2</h1>
+      </div>
+      <p>
+        "This year, we plan to use <span style="font-style: italic;">iGEM's component database</span> to train an AI model that will use existing components to transform an input plasmid function into multiple plasmids that have the potential to fulfill that function, while giving the base sequences of the individual components in the plasmid, the database number, and so on. We will go through the following process to build and refine our AI model. (workflow) First, we will organize the database accumulated by iGEM for 20 years into the form of a knowledge graph, and use manual tagging to train the AI model to classify and summarize the data. Next, we will use this knowledge graph to build （train?）an AI model, the function of which is to input the desired function of the plasmid, and the model will give multiple plasmids that can potentially fulfill the function, and at the same time give the sequence of each element base in the plasmid, the database number, etc. Our model will also provide a newcomer mode, so that the general public who has not been exposed to synthetic biology can input vague requirements, the model will give multiple plasmids that can potentially fulfill the function, and will also give how to use the plasmid, as well as detailed information about the function and components of the plasmid, which will make it more convenient for the general public to get in touch with synthetic biology and use it. According to the needs of the training dataset and the knowledge graph dataset required by our model, we are going to give a software to fill in the iGEM database in a standardized way, which only needs to fill in the data according to the instructions to make the data filled in the database become a high-quality corpus. In the long run, the iGEM database can become a high-quality synthetic biology corpus database, and the data in it can be directly used to train AI models. This will make it easier for us to optimize and iterate our models, and for other iGEMers or others to train AI models. In turn, this will facilitate the whole synthetic biology to embrace AI."
+      </p>
+      <div class="img-wrap">
+        <div>
+          <img src="htts://static.igem.wiki/teams/4628/wiki/imple/1n.jpg">
+        </div>
+        <div class="disc">Figure 1: Product Composition of Flora Sentinel</div>
+      </div>
+    </div>
+    <div class="s1" id="2">
+      <div class="h1-wrap">
+        <h1>subtitle3</h1>
+      </div>
+      <p>
+      "This year, we plan to use <span style="font-style: italic;">iGEM's component database</span> to train an AI model that will use existing components to transform an input plasmid function into multiple plasmids that have the potential to fulfill that function, while giving the base sequences of the individual components in the plasmid, the database number, and so on. We will go through the following process to build and refine our AI model. (workflow) First, we will organize the database accumulated by iGEM for 20 years into the form of a knowledge graph, and use manual tagging to train the AI model to classify and summarize the data. Next, we will use this knowledge graph to build （train?）an AI model, the function of which is to input the desired function of the plasmid, and the model will give multiple plasmids that can potentially fulfill the function, and at the same time give the sequence of each element base in the plasmid, the database number, etc. Our model will also provide a newcomer mode, so that the general public who has not been exposed to synthetic biology can input vague requirements, the model will give multiple plasmids that can potentially fulfill the function, and will also give how to use the plasmid, as well as detailed information about the function and components of the plasmid, which will make it more convenient for the general public to get in touch with synthetic biology and use it. According to the needs of the training dataset and the knowledge graph dataset required by our model, we are going to give a software to fill in the iGEM database in a standardized way, which only needs to fill in the data according to the instructions to make the data filled in the database become a high-quality corpus. In the long run, the iGEM database can become a high-quality synthetic biology corpus database, and the data in it can be directly used to train AI models. This will make it easier for us to optimize and iterate our models, and for other iGEMers or others to train AI models. In turn, this will facilitate the whole synthetic biology to embrace AI."
+      </p>
+      <h2 class="h2-wrap"> second title-1 </h2>
+      <p>
+        For high economic value crops that are
+        susceptible to diseases, engineered bacterial strains combined with hydroponics or other soilless cultivation
+        methods can ensure the quality of agricultural products.
+      </p>
+      <h2 class="h2-wrap">second title-2</h2>
+      <p>
+        For high economic value crops that are
+        susceptible to diseases, engineered bacterial strains combined with hydroponics or other soilless cultivation
+        methods can ensure the quality of agricultural products.
+      </p>
+      <div class="s2">
+        <div class="img-wrap">
+          <div>
+            <img src="htts://static.igem.wiki/teams/4628/wiki/imple/4.png">
+          </div>
+          <div class="disc">Figure 4: Applicable Scenarios and Application Methods of Flora Sentinel</div>
+        </div>
+      </div>
+    </div>
+    <div class="s1 ref" id="3">
+      <div class="h1-wrap">
+        <h1>subtitle4</h1>
+      </div> 
+      <div class="ref-wrap">
+        <p>[1]&nbsp;&nbsp;Kaku T, Sugiura K, Entani T, Osabe K, Nagai T. Enhanced brightness of bacterial luciferase by bioluminescence resonance energy transfer. Sci Rep. 2021;11(1):14994. Published 2021 Jul 22. doi:10.1038/s41598-021-94551-4</p>
+      </div>
+    </div>
+    <div class="s1" id="4">
+      <div class="h1-wrap">
+        <h1>instantiate</h1>
+      </div>
+      <p class="no-indent">(1) It may be affected by environmental factors and the effect is unstable. <span style="font-style: italic;">Agrobacterium</span> has different physiological activities under different temperature and humidity conditions, so it cannot be used in all agricultural areas. In addition, the dosage and effect may be affected in different regions.</p>
+      <p class="no-indent">(2) Trade-off Between Yield and Resistance: There is often a trade-off between yield and disease resistance. Energy and resources that a plant could use to defend against diseases are instead used for growth and reproduction. Therefore, the use period and amount of engineered bacteria need to be strictly controlled. </p>
+      <p class="no-indent">(3) The design cycle of nanobody is long, so it is necessary to cooperate with other scientific research to establish a usable antibody platform, which still needs further research.</p>
+    </div>
+    <div class="s1" id="5">
+      <div class="h1-wrap">
+        <h1>……</h1>
+      </div>
+      <div>
+        <p>
+          "This year, we plan to use <span style="font-style: italic;">iGEM's component database</span> to train an AI model that will use existing components to transform an input plasmid function into multiple plasmids that have the potential to fulfill that function, while giving the base sequences of the individual components in the plasmid, the database number, and so on. We will go through the following process to build and refine our AI model. (workflow) First, we will organize the database accumulated by iGEM for 20 years into the form of a knowledge graph, and use manual tagging to train the AI model to classify and summarize the data. Next, we will use this knowledge graph to build （train?）an AI model, the function of which is to input the desired function of the plasmid, and the model will give multiple plasmids that can potentially fulfill the function, and at the same time give the sequence of each element base in the plasmid, the database number, etc. Our model will also provide a newcomer mode, so that the general public who has not been exposed to synthetic biology can input vague requirements, the model will give multiple plasmids that can potentially fulfill the function, and will also give how to use the plasmid, as well as detailed information about the function and components of the plasmid, which will make it more convenient for the general public to get in touch with synthetic biology and use it. According to the needs of the training dataset and the knowledge graph dataset required by our model, we are going to give a software to fill in the iGEM database in a standardized way, which only needs to fill in the data according to the instructions to make the data filled in the database become a high-quality corpus. In the long run, the iGEM database can become a high-quality synthetic biology corpus database, and the data in it can be directly used to train AI models. This will make it easier for us to optimize and iterate our models, and for other iGEMers or others to train AI models. In turn, this will facilitate the whole synthetic biology to embrace AI."
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="gotop">
+  <img src="https:/static.igem.wiki/teams/4628/wiki/gotop.svg" alt="">
+  <div class="text-wrap">
+    <div>BACK TO</div>
+    <div>TOP !</div>
+  </div>
+</div>
+
+
+{% endblock %}
